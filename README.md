@@ -6,7 +6,9 @@ Kendi projelerinizdeki ihtiyaca göre geliştirebilirsiniz. Örneğin; sipariş 
 Projeyi bilgisayarınıza klonlayın.
 Ardından aşağıdaki komutları projenizin dizinindeyken çalıştırın.
 
-Örnek Kullanım (Tarayıcınızın adres çubuğundan veya Postman gibi araçlarla GET isteği yaparak kullanabilrsiniz.)
+Örnek Kullanım 
+1) (Tarayıcınızın adres çubuğundan veya Postman gibi araçlarla GET isteği yaparak kullanabilrsiniz.)
+2) (mailserver.js dosyasına POST metodu kabul eden endpoint oluşturarak form ile değişkenleri gönderebilirsiniz.)
 ->  http://localhost:8080/?user=EPOSTAHESABINIZ&pass=EPOSTAHESABINIZINŞİFRESİ&to=GÖNDERİLECEKEPOSTAADRESİ&subject=EPOSTAKONUSU&text=EPOSTAİÇERİĞİ
 
 ```sh
