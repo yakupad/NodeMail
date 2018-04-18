@@ -4,6 +4,7 @@
   "description": "Node.js Otomotik Email Gönderme Servisi",
   "main": "mailserver.js",
   "scripts": {
+    "start": "node mailserver.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [

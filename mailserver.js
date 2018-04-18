@@ -5,40 +5,39 @@ var express = require('express');
 var app = express();
 
 app.get('/', function (request, response) {
-    console.log("Hello World");
-    response.send("<marquee>E-Postanız Gönderiliyor...</marquee>");
+    console.log("Gönderiliyor...");
+    response.send("<p><b>Örnek Kullanım Şekli:</b><br> http://localhost:8080/?user=EPOSTAHESABINIZ&pass=EPOSTAHESABINIZINŞİFRESİ&to=GÖNDERİLECEKEPOSTAADRESİ&subject=EPOSTAKONUSU&text=EPOSTAİÇERİĞİ</p>");
     var user = request.query.user;
     var pass = request.query.pass;
-    var from = request.query.from;
     var to = request.query.to;
     var subject = request.query.subject;
     var text = request.query.text;
-    sendMail(user,pass,from,to,subject,text)
+    sendMail(user,pass,to,subject,text)
 })
 
-app.listen(process.env.PORT || 8093, () => console.log('All is ok!'));
-
-function sendMail(_user,_pass,_from,_to,_subject,_text){
+function sendMail(_user,_pass,_to,_subject,_text){
     var transporter = nodemailer.createTransport({
         service: 'gmail',
         auth: {
-            user: user,
-            pass: pass
+            user: _user,
+            pass: _pass
         }
     });
 
     var mailOptions = {
-        from: from,
-        to: to,
-        subject: subject,
-        text: text
+        from: _user,
+        to: _to,
+        subject: _subject,
+        text: _text
     };
 
     transporter.sendMail(mailOptions, function (error, info) {
         if (error) {
             console.log(error);
         } else {
-            console.log('Email sent: ' + info.response);
+            console.log('E-Posta Gönderildi: ' + info.response);
         }
     });
 }
+
+app.listen(process.env.PORT || 8080, () => console.log('E-Posta Sunucunuz Başlatıldı!'));
