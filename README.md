@@ -13,3 +13,35 @@ Ardından aşağıdaki komutları projenizin dizinindeyken çalıştırın.
 $ npm install
 $ npm start
 ```
+
+### BASİT MAİL GÖNDERMEK İÇİN
+```sh
+var mailOptions = {
+  from: 'youremail@gmail.com',
+  to: 'myfriend@yahoo.com',
+  subject: 'Sending Email using Node.js',
+  text: 'That was easy!'
+};
+```
+
+### BİRDEN FAZLA KİŞİYE MAİL GÖNDERMEK İÇİN
+```sh
+var mailOptions = {
+  from: 'youremail@gmail.com',
+  to: 'myfriend@yahoo.com, myotherfriend@yahoo.com',
+  subject: 'Sending Email using Node.js',
+  text: 'That was easy!'
+}
+```
+
+### HTML TEMPLATE KULLANARAK MAİL GÖNDERMEK İÇİN
+```sh
+var mailOptions = {
+  from: 'youremail@gmail.com',
+  to: 'myfriend@yahoo.com',
+  subject: 'Sending Email using Node.js',
+  html: '<h1>Welcome</h1><p>That was easy!</p>'
+}
+```
+
+ mailserver.js dosyasındaki mailOptions objesini değiştirebilirsiniz!
