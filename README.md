@@ -1,4 +1,6 @@
 # Node.JS E-Posta Servisi
+Node.js ile uygulamalarınız için mail gönderme servisi. Hızlı ve basit şekilde E-Posta gönderin.
+Kendi projelerinizdeki ihtiyaca göre geliştirebilirsiniz. Örneğin; sipariş formundaki verilerin veritabanına kayıt edilirken aynı zamanda eposta olarak gönderilmesini sağlayabilirsiniz...
 
 ## Yükleme
 Projeyi bilgisayarınıza klonlayın.
